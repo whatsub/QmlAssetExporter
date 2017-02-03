@@ -15,7 +15,7 @@ QtObject {
         "fontFamily" : "{{font}}",
         "fontSize" : {{fontSize|round}},
         "letterSpacing" : {{letterSpacing}},
-        "lineHeight" : {{lineHeight}},
+        "lineHeight" : {{if lineHeight|equals>auto}}{{fontSize}}{{else}}{{lineHeight}}{{/if}},
         "color" : "{{fontColorHex}}",
         "justification": Text.{{if justification|equals>Left align}}AlignLeft{{else}}{{if justification|equals>Right align}}AlignRight{{else}}{{if justification|equals>Center align}}AlignHCenter{{else}}AlignJustify{{/if}}{{/if}}{{/if}},
         "opacity" : {{if opacity|equals>100}}1.0{{else}}{{opacity}}/100{{/if}}
