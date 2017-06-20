@@ -1,5 +1,4 @@
 {{newFile|name>{{document.name|trim|pack|capcase|call>slice>0>-4}}_Style.qml}}
-pragma Singleton
 import QtQuick 2.4
 
 QtObject {
