@@ -3,11 +3,11 @@ import QtQuick 2.4
 
 QtObject {
 {{assets}}
-    readonly property rect rect{{assetName|cleanAssetName|capcase|split>-|join>_|}} : Qt.rect({{x}}, {{y}}, {{width}}, {{height}}){{/assets}}
+    readonly property var rect{{assetName|cleanAssetName|capcase|split>-|join>_|}} : { "x" : {{x}}, "y" : {{y}}, "width" : {{width}}, "height" : {{height}} }{{/assets}}
 {{assets}}{{versions}}
     readonly property string image{{assetName|cleanAssetName|capcase|split>-|join>_|}}{{varName}}{{stateName}} : "{{file}}"{{/versions}}{{/assets}}
 {{texts}}
-    readonly property rect rect{{name|capcase}} : Qt.rect({{x}}, {{y}}, {{width}}, {{height}}){{/texts}}
+    readonly property var rect{{name|capcase}} : { "x" : {{x}}, "y" : {{y}}, "width" : {{width}}, "height" : {{height}} }{{/texts}}
 {{texts}}
     readonly property var text{{name|capcase}}: {
         "text" : "{{content}}",
