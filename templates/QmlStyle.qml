@@ -1,5 +1,5 @@
 {{newFile|name>{{document.name|trim|pack|capcase|call>slice>0>-4}}_Style.qml}}
-import QtQuick 2.4
+import QtQuick 2.9
 
 QtObject {
 {{assets}}
